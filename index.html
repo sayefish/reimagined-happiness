@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Birthday Celebration</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- MAIN CARD -->
+  <div class="welcome-card" id="main-card">
+    <h1>Happy Birthday Tarana!</h1>
+    <div class="front-content">
+      <img src="assets/images/image1.jpg" alt="Birthday Hero" class="main-image">
+      <div class="side-buttons">
+        <button id="btn-messages">Open Celebration</button>
+        <button id="btn-chithi">চিঠি</button>
+        <button id="btn-birthday">Birthday Girl</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPEN CELEBRATION -->
+  <div class="section" id="messages-section">
+    <button class="home-btn" onclick="showSection('main')">🏠 Home</button>
+    <h2>Special Celebration</h2>
+
+    <div class="romantic-overlay" id="romantic-overlay" aria-hidden="true"></div>
+
+    <div class="messages" id="messages"></div>
+
+    <div class="gallery" id="gallery">
+      <img src="assets/images/img1.jpg" alt="Image 1">
+      <img src="assets/images/img2.jpg" alt="Image 2">
+      <img src="assets/images/img3.jpg" alt="Image 3">
+      <img src="assets/images/img4.jpg" alt="Image 4">
+    </div>
+
+    <button class="next-btn" id="next-msg">Next</button>
+
+    <audio id="celebration-audio" loop>
+      <source src="assets/audio/song.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <!-- CHITHI SECTION -->
+  <div class="section" id="chithi-section">
+    <button class="home-btn" onclick="showSection('main')">🏠 Home</button>
+    <h2>Special Notes</h2>
+    <div class="messages" id="chithi-messages"></div>
+    <button class="next-btn" id="next-chithi">Next</button>
+  </div>
+
+  <!-- BIRTHDAY VIDEO SECTION -->
+  <div class="section" id="birthday-section">
+    <button class="home-btn" onclick="showSection('main')">🏠 Home</button>
+    <h2>Birthday Videos</h2>
+
+    <div class="birthday-buttons">
+      <button class="video-option" id="open-birthday-1">
+        <div class="video-thumb">
+          <img src="assets/images/img5.jpg" alt="Birthday preview 1">
+          <div class="video-badge">Play — পুকুর😩</div>
+        </div>
+      </button>
+
+      <button class="video-option" id="open-birthday-2">
+        <div class="video-thumb">
+          <img src="assets/images/img6.jpg" alt="Birthday preview 2">
+          <div class="video-badge">Play — Mine😤</div>
+        </div>
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<div class="video-modal" id="video-modal" aria-hidden="true">
+  <div class="video-modal-content">
+    <button class="modal-close" id="modal-close">← Back</button>
+    <video id="modal-video" class="modal-video" controls playsinline>
+      <source id="modal-video-src" src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<canvas class="confetti" id="confetti"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
